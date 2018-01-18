@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-crayola',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crayola.component.css']
 })
 export class CrayolaComponent implements OnInit {
+  crayola: number;
 
-  constructor() { }
+  constructor(private _dataService: DataService) { }
 
   ngOnInit() {
+  }
+
+  find() {
+    this.crayola = this._dataService.findCrayola();
   }
 
 }

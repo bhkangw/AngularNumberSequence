@@ -1,3 +1,6 @@
-<p>
-  alpha works!
-</p>
+<button (click)="pushAlpha()">Generate sequence</button>
+<ul>
+  <li *ngFor="let num of alpha">
+    {{ num }}
+  </li>
+</ul>
